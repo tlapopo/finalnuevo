@@ -22,7 +22,7 @@
 
 
 
-<a href="{{url('pedidos/create')}}" class="btn btn-success">Agregar Pedidos</a>
+
 <br>
 <br>
 <table class="table table-light">
@@ -60,6 +60,7 @@
     {{method_field('DELETE')}}
     <input class="btn btn-danger" type="submit" onclick="return confirm('¿Seguro que quieres elimar este dato')"
     value="Borar">
+    <a href="{{url('pedidos/create')}}" class="btn btn-success">Agregar Pedidos</a>
     </form>
     </td>
 

@@ -22,14 +22,13 @@
 
 
 
-<a href="{{url('clientes/create')}}" class="btn btn-success">Crear Cliente</a>
+
 <br>
 <br>
 <table class="table table-light">
 <thead class="thead-light">
 <tr>
     <th>#</th>
-    <th>Fotografia</th>
     <th>Nombre</th>
     <th>Apellido Paterno</th>
     <th>Apellido Materno</th>
@@ -42,9 +41,6 @@
 @foreach($clientes as $cliente)
 <tr>
     <td>{{$cliente->id}}</td>
-    <td>
-    <img class="img-thumbnail img-fluid" src="{{asset('storage').'/'.$cliente->foto}}" width="100" alt="">
-    </td>
     <td>{{$cliente->Nombre}}</td>
     <td>{{$cliente->primer_apellido}}</td>
     <td>{{$cliente->segundo_apellido}}</td>
@@ -59,6 +55,7 @@
     {{method_field('DELETE')}}
     <input class="btn btn-danger" type="submit" onclick="return confirm('¿Seguro que quieres elimar este dato')"
     value="Borar">
+    <a href="{{url('clientes/create')}}" class="btn btn-success">Crear Cliente</a>
     </form>
     </td>
 

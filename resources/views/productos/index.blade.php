@@ -22,14 +22,13 @@
 
 
 
-<a href="{{url('productos/create')}}" class="btn btn-success">Agregar Productos</a>
+
 <br>
 <br>
 <table class="table table-light">
 <thead class="thead-light">
 <tr>
     <th>#</th>
-    <th>Fotografia</th>
     <th>Nombre</th>
     <th>Descripcion</th>
     <th>Precio</th>
@@ -43,9 +42,6 @@
 @foreach($productos as $producto)
 <tr>
     <td>{{$producto->id}}</td>
-    <td>
-    <img class="img-thumbnail img-fluid" src="{{asset('storage').'/'.$producto->foto}}" width="100" alt="">
-    </td>
     <td>{{$producto->Nombre}}</td>
     <td>{{$producto->Descripcion}}</td>
     <td>{{$producto->Precio}}</td>
@@ -62,6 +58,7 @@
     {{method_field('DELETE')}}
     <input class="btn btn-danger" type="submit" onclick="return confirm('¿Seguro que quieres elimar este dato')"
     value="Borar">
+    <a href="{{url('productos/create')}}" class="btn btn-success">Agregar Productos</a>
     </form>
     </td>
 
